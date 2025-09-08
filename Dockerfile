@@ -1,3 +1,11 @@
+# 1단계: 빌드
+FROM gradle:8.7-jdk17 AS builder
+WORKDIR /app
+COPY . .
+RUN gradle build -x test
+
+# 2단계: 런타임
 FROM openjdk:17-jdk-slim
-COPY build/libs/app.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+WORKDIR /app
+COPY --from=builder /app/build/libs/*.jar app.jar
+ENTRYPOINT ["java","-jar","/app/app.jar"]
