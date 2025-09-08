@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/yoyager
+    url: jdbc:postgresql://dpg-d2ve6qv5rbs73cpbe800-a:5432/yoyager
     username: root
-    password: yoyager
+    password: 08BC5274UD5nOMp6cDYM5qQ60YfZWs8Z
     driver-class-name: org.postgresql.Driver
 
   jpa:
@@ -12,5 +12,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
 jwt:
-  secret-key: "KFEPEWcOQvUo5GUP3vNnETRM37rBSrEaerKFksyjRice0XeaqJJE+8j2ybwzAGEsJg8pwczMS14buxeZiCIwGQ=="
+  secret-key: ${JWT_SECRET_KEY}
