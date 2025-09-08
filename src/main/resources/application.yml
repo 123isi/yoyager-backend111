@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/yoyager
+    username: root
+    password: yoyager
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+jwt:
+  secret-key: "KFEPEWcOQvUo5GUP3vNnETRM37rBSrEaerKFksyjRice0XeaqJJE+8j2ybwzAGEsJg8pwczMS14buxeZiCIwGQ=="

@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mysql:
+    container_name: yoyager
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "yoyager"
+      POSTGRES_DB: "yoyager"
+    ports:
+      - "5432:5432"
